@@ -35,4 +35,53 @@ In future our model will detect or decode full sentences by gestures which will 
 •Use in learning sign language .
 
 
+ STEPS FOLLOWED :-
+ 
+ Step 1. Clone this repository
+ 
+ Step 2. Create a new virtual environment
+ 
+python -m newenv TFOD
+
+Step 3. Activate your virtual environment
+
+source tfod/bin/activate # Linux
+
+.\tfod\Scripts\activate # Windows 
+
+
+Step 4. Install dependencies and add virtual environment to the Python Kernel
+
+python -m pip install --upgrade pip
+
+pip install ipykernel
+
+python -m ipykernel install --user --name=tfodj
+
+step 5. Collect images using the Notebook "Image collection"
+
+Step 6. Manually divide collected images into two folders train and test. So now all folders and annotations should be split between the following two folders.
+
+\TFOD\Tensorflow\workspace\images\train
+\TFOD\Tensorflow\workspace\images\test
+
+
+Step 7. Begin training process by opening "Trainning and detection"
+
+step 8. Train the model, inside of the notebook, you may choose to train the model from within the notebook or the seperate terminal on the windows machine.
+
+Step 9. You can optionally evaluate your model inside of Tensorboard. Once the model has been trained and you have run the evaluation command
+
+Navigate to the evaluation folder for your trained model 
+e.g.
+ cd Tensorlfow/workspace/models/my_ssd_mobnet/eval
+
+
+and open Tensorboard with the following command
+
+tensorboard --logdir=. 
+
+
+Tensorboard will be accessible through your browser and you will be able to see metrics including mAP - mean Average Precision, and Recall.
+
 
